@@ -2,7 +2,7 @@
 This application is a React Native mobile app with the Hermes engine enabled, created for the Hermes React Native Reverse Engineering article.
 
 # Too Lazy to Build?
-Go to release section for downloading APK and IPA file.
+Go to [Releases](https://github.com/Incognito-Lab/DemoSecret-Mobile-App/releases) section for downloading APK and IPA file.
 
 # Build This App by Yourself
 1. Clone this repo.
