@@ -10,7 +10,7 @@ import {
   Platform
 } from 'react-native';
 import { router } from 'expo-router';
-import * as CryptoJS from 'crypto-js';
+import * as Crypto from 'expo-crypto';
 // Import icons (if you don't have these, install: npm install @expo/vector-icons)
 import { Ionicons } from '@expo/vector-icons';
 
@@ -27,9 +27,9 @@ export default function LoginScreen() {
     setPasswordVisible(!passwordVisible);
   };
 
-  const validatePassword = () => {
+  const validatePassword = async () => {
     // Hash the entered password using SHA-256
-    const hashedInput = CryptoJS.SHA256(password).toString(CryptoJS.enc.Hex);
+    const hashedInput = await Crypto.digestStringAsync(Crypto.CryptoDigestAlgorithm.SHA256, password);
     console.log(hashedInput);
     
     // Compare with the hardcoded hash
